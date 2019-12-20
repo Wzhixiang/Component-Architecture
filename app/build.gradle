@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.version.compileSdkVersion
+    buildToolsVersion rootProject.ext.version.buildToolsVersion
+    defaultConfig {
+        applicationId "com.wzx.component"
+        minSdkVersion rootProject.ext.version.minSdkVersion
+        targetSdkVersion rootProject.ext.version.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':common')
+
+    if(isNeedComponent.toBoolean()){
+        implementation project(path: ':modulea')
+        implementation project(path: ':moduleb')
+    }
+}
