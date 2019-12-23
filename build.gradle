@@ -38,15 +38,24 @@ ext {
             arouterCompilerVersion : "1.2.2",
             constraintlayoutVersion: "1.1.3",
             butterknifeVersion     : "10.2.1",
+            daggerVersion          : "2.16",
+            gsonVersion            : "2.8.6",
     ]
 
     dependencies = [
-            "appcompat"           : "androidx.appcompat:appcompat:${version.appcompatVersion}",
-            "arouter-api"         : "com.alibaba:arouter-api:${version.arouterApiVersion}",
-            "arouter-compiler"    : "com.alibaba:arouter-compiler:${version.arouterCompilerVersion}",
-            "constraintlayout"    : "androidx.constraintlayout:constraintlayout:${version.constraintlayoutVersion}",
-            "butterknife"         : "com.jakewharton:butterknife:${version.butterknifeVersion}",
-            "butterknife-compiler": "com.jakewharton:butterknife-compiler:${version.butterknifeVersion}"
+            "appcompat"               : "androidx.appcompat:appcompat:${version.appcompatVersion}",
+            "arouter-api"             : "com.alibaba:arouter-api:${version.arouterApiVersion}",
+            "arouter-compiler"        : "com.alibaba:arouter-compiler:${version.arouterCompilerVersion}",
+            "constraintlayout"        : "androidx.constraintlayout:constraintlayout:${version.constraintlayoutVersion}",
+            "butterknife"             : "com.jakewharton:butterknife:${version.butterknifeVersion}",
+            "butterknife-compiler"    : "com.jakewharton:butterknife-compiler:${version.butterknifeVersion}",
+
+            "dagger-compiler"         : "com.google.dagger:dagger-compiler:${version.daggerVersion}",
+            "dagger"                  : "com.google.dagger:dagger:${version.daggerVersion}",
+            "dagger-android"          : "com.google.dagger:dagger-android:${version.daggerVersion}",
+            "dagger-android-support"  : "com.google.dagger:dagger-android-support:${version.daggerVersion}",
+            "dagger-android-processor": "com.google.dagger:dagger-android-processor:${version.daggerVersion}",
+            "gson"                    : "com.google.code.gson:gson:${version.gsonVersion}",
     ]
 
 }
