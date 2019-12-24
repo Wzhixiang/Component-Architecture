@@ -5,7 +5,7 @@ import com.wzx.common.base.BaseApplication;
 
 
 /**
- * Description：
+ * Description：主module只是一个壳，作为引导
  * FileName：App
  * <p>
  * Author：wzx
