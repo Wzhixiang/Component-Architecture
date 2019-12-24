@@ -40,6 +40,8 @@ ext {
             butterknifeVersion     : "10.2.1",
             daggerVersion          : "2.16",
             gsonVersion            : "2.8.6",
+            roomVersion            : "2.2.0",
+            materialVersion        : "1.2.0-alpha02"
     ]
 
     dependencies = [
@@ -56,6 +58,15 @@ ext {
             "dagger-android-support"  : "com.google.dagger:dagger-android-support:${version.daggerVersion}",
             "dagger-android-processor": "com.google.dagger:dagger-android-processor:${version.daggerVersion}",
             "gson"                    : "com.google.code.gson:gson:${version.gsonVersion}",
+            "appcompat"           : "androidx.appcompat:appcompat:${version.appcompatVersion}",
+            "arouter-api"         : "com.alibaba:arouter-api:${version.arouterApiVersion}",
+            "arouter-compiler"    : "com.alibaba:arouter-compiler:${version.arouterCompilerVersion}",
+            "constraintlayout"    : "androidx.constraintlayout:constraintlayout:${version.constraintlayoutVersion}",
+            "butterknife"         : "com.jakewharton:butterknife:${version.butterknifeVersion}",
+            "butterknife-compiler": "com.jakewharton:butterknife-compiler:${version.butterknifeVersion}",
+            "room-runtime"        : "androidx.room:room-runtime:${version.roomVersion}",
+            "room-compiler"       : "androidx.room:room-compiler:${version.roomVersion}",
+            "material"            : "com.google.android.material:material:${version.materialVersion}",
     ]
 
 }

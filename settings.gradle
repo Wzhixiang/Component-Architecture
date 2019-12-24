@@ -1,2 +1,2 @@
-include ':app', ':common', ':modulea', ':moduleb'
+include ':app', ':common', ':executor', ':task', ':data'
 rootProject.name='Component-Architecture'

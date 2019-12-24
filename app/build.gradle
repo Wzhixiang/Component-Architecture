@@ -29,6 +29,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation rootProject.ext.dependencies["arouter-api"]
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
     testImplementation 'junit:junit:4.12'
@@ -37,7 +38,7 @@ dependencies {
     implementation project(path: ':common')
 
     if(isNeedComponent.toBoolean()){
-        implementation project(path: ':modulea')
-        implementation project(path: ':moduleb')
+        implementation project(path: ':task')
+        implementation project(path: ':executor')
     }
 }

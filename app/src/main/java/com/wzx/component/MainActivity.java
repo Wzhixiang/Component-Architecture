@@ -7,7 +7,9 @@ import androidx.annotation.Nullable;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.wzx.common.base.BaseActivity;
-import com.wzx.common.route.Path;
+import com.wzx.executor.ExecutorPath;
+import com.wzx.issue.IssuePath;
+
 public class MainActivity extends BaseActivity {
 
 
@@ -23,11 +25,11 @@ public class MainActivity extends BaseActivity {
 
     public void onViewsClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_to_module_a:
-                ARouter.getInstance().build(Path.MODULEA_ACTIVITY).navigation();
+            case R.id.btn_to_add_executor:
+                ARouter.getInstance().build(ExecutorPath.PATH_ADD_EXECUTOR).navigation();
                 break;
-            case R.id.btn_to_module_b:
-                ARouter.getInstance().build(Path.MODULEB_ACTIVITY).navigation();
+            case R.id.btn_to_task:
+                ARouter.getInstance().build(IssuePath.PATH_TASKS).navigation();
                 break;
             default:
                 break;

@@ -29,13 +29,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     api rootProject.ext.dependencies["appcompat"]
-    api rootProject.ext.dependencies["constraintlayout"]
-    api rootProject.ext.dependencies["arouter-api"]
+    api rootProject.ext.dependencies["material"]
+    api project(path: ':data')
 
     //dagger
     api rootProject.ext.dependencies["dagger"]
     api rootProject.ext.dependencies["dagger-android"]
     api rootProject.ext.dependencies["dagger-android-support"]
+
+    api rootProject.ext.dependencies["gson"]
 
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
     annotationProcessor rootProject.ext.dependencies["dagger-android-processor"]

@@ -2,8 +2,10 @@ package com.wzx.common.di.component;
 
 import android.app.Application;
 
-import com.wzx.common.App;
+import com.wzx.common.base.BaseApplication;
 import com.wzx.common.di.module.AppModule;
+import com.wzx.common.di.module.DataModule;
+import com.wzx.data.DataBaseImpl;
 
 import javax.inject.Singleton;
 
@@ -24,10 +26,13 @@ import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
 @Component(modules = {AppModule.class,
+        DataModule.class,
         AndroidSupportInjectionModule.class})
-public interface AppComponent extends AndroidInjector<App> {
+public interface AppComponent extends AndroidInjector<BaseApplication> {
 
-    Application application();
+    BaseApplication provideBaseApplication();
+
+    DataBaseImpl provideDataBaseImpl();
 
     @Component.Builder
     interface Builder {
@@ -35,7 +40,9 @@ public interface AppComponent extends AndroidInjector<App> {
         @BindsInstance
         AppComponent.Builder application(Application application);
 
-        AppComponent.Builder appModule(AppModule module);
+        AppComponent.Builder appModule(AppModule appModule);
+
+        AppComponent.Builder dataModule(DataModule dataModule);
 
         AppComponent build();
     }
