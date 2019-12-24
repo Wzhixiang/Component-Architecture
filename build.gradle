@@ -38,6 +38,8 @@ ext {
             arouterCompilerVersion : "1.2.2",
             constraintlayoutVersion: "1.1.3",
             butterknifeVersion     : "10.2.1",
+            roomVersion            : "2.2.0",
+            materialVersion        : "1.2.0-alpha02"
     ]
 
     dependencies = [
@@ -46,7 +48,10 @@ ext {
             "arouter-compiler"    : "com.alibaba:arouter-compiler:${version.arouterCompilerVersion}",
             "constraintlayout"    : "androidx.constraintlayout:constraintlayout:${version.constraintlayoutVersion}",
             "butterknife"         : "com.jakewharton:butterknife:${version.butterknifeVersion}",
-            "butterknife-compiler": "com.jakewharton:butterknife-compiler:${version.butterknifeVersion}"
+            "butterknife-compiler": "com.jakewharton:butterknife-compiler:${version.butterknifeVersion}",
+            "room-runtime"        : "androidx.room:room-runtime:${version.roomVersion}",
+            "room-compiler"       : "androidx.room:room-compiler:${version.roomVersion}",
+            "material"            : "com.google.android.material:material:${version.materialVersion}",
     ]
 
 }

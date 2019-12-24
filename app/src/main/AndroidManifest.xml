@@ -3,7 +3,7 @@
     package="com.wzx.component">
 
     <application
-        android:name="com.wzx.common.App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,8 +18,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.wzx.modulea.ModuleAActivity" />
-        <activity android:name="com.wzx.moduleb.ModuleBActivity" />
+        <activity android:name="com.wzx.executor.add.AddExecutorActivity" />
+
+        <activity android:name="com.wzx.issue.add.AddTaskActivity" />
+
+        <activity android:name="com.wzx.issue.task.TasksActivity" />
+
+        <activity android:name="com.wzx.issue.selectExecutor.SelectExecutorActivity"/>
     </application>
 
 </manifest>
